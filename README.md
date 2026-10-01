@@ -6,14 +6,13 @@
 [![License](https://img.shields.io/badge/license-MIT%20%2F%20Apache--2.0-blue.svg)](#license)
 [![Crates.io](https://img.shields.io/crates/v/ocpp-client)](https://crates.io/crates/ocpp-client)
 [![Documentation](https://docs.rs/ocpp-client/badge.svg)](https://docs.rs/ocpp-client)
-[![.github/workflows/ci.yaml](https://github.com/flowionab/ocpp-client/actions/workflows/ci.yaml/badge.svg)](https://github.com/flowionab/ocpp-client/actions/workflows/ci.yaml)
 [![no_std](https://img.shields.io/badge/no__std-compatible-brightgreen.svg)](#features)
 
 ---
 
 ## 🚀 Overview
 
-**OCPP Client** is the communication layer of the **Flowion Rust OCPP ecosystem**, providing the networking and transport foundation required to build OCPP-enabled charge points and backend integrations.
+**OCPP Client** is the communication layer of the **Rust OCPP ecosystem**, providing the networking and transport foundation required to build OCPP-enabled charge points and backend integrations.
 
 The library handles the complexities of establishing and managing OCPP connections, including:
 
@@ -21,8 +20,6 @@ The library handles the complexities of establishing and managing OCPP connectio
 * Transport handling
 * Message routing
 * Communication reliability
-
-OCPP message types and protocol definitions are provided by [`ocpp-types`](https://github.com/flowionab/ocpp-types), while OCPP Client focuses on the communication layer required to exchange messages between charge points and Charge Station Management Systems (CSMS).
 
 Designed for both cloud/server environments and resource-constrained embedded systems, OCPP Client speaks WebSocket out of the box and compiles for `no_std` + `alloc` targets. An `embassy-net`-based transport and an STM32 board scaffold ship alongside it as **experimental** crates - see [Supported Transports](#-supported-transports).
 
@@ -200,9 +197,9 @@ OCPP Client separates protocol definitions from communication.
 
 ---
 
-## 🌐 Flowion OCPP Ecosystem
+## 🌐 OCPP Ecosystem
 
-OCPP Client is designed as a modular building block within the **Flowion Rust OCPP ecosystem**.
+OCPP Client is designed as a modular building block within the **Rust OCPP ecosystem**.
 
 Each project has a focused responsibility, allowing developers to choose the right level of abstraction for their application.
 
@@ -211,8 +208,6 @@ Each project has a focused responsibility, allowing developers to choose the rig
 ### 📦 ocpp-types
 
 **OCPP protocol definitions and data models**
-
-[`ocpp-types`](https://github.com/flowionab/ocpp-types) provides the foundation for working with OCPP messages in Rust.
 
 It contains:
 
@@ -250,8 +245,6 @@ It is designed to run in both:
 ### ⚡ ocpp-charge-point
 
 **Complete charge point firmware framework**
-
-[`ocpp-charge-point`](https://github.com/flowionab/ocpp-charge-point) provides a complete framework for building OCPP-enabled charge point firmware.
 
 The goal is to make developing custom charging hardware as simple as implementing the required hardware bindings.
 
@@ -430,14 +423,6 @@ OCPP Client is dual licensed:
 * Apache License 2.0
 
 You may choose either license.
-
----
-
-## 🏢 About Flowion
-
-**OCPP Client** is developed by **Flowion AB** as part of our effort to make EV charging development more accessible through modern, open-source tooling.
-
-Flowion builds software solutions for electric vehicle charging using open standards such as **OCPP**, helping developers and businesses build reliable and scalable charging infrastructure.
 
 ---
 
